@@ -5,7 +5,7 @@ import { News } from "../models/news.model.js";
 
 const cron = () => {
     fetchNews();
-    setInterval(fetchNews, 1 * 60 * 60 * 1000);
+    setInterval(fetchNews, 10 * 60 * 1000);
 };
 
 const fetchNews = async () => {

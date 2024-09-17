@@ -8,7 +8,8 @@ const fetchAllNews = asyncHandler(async (req, res) => {
 
     const news = await News.find()
         .skip((page - 1) * limit)
-        .limit(limit);
+        .limit(limit)
+        .sort({ _id: -1 });
 
     const totalNews = await News.countDocuments();
     const totalPages = Math.ceil(totalNews / limit);
