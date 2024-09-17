@@ -15,3 +15,5 @@ connectToMongo()
         console.log("Connection Failed due to :", error);
         return process.exit(1);
     });
+
+export default app;
